@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | FitCore</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo">FIT<span>CORE</span></div>
+
+        <div class="sidebar-label">MAIN MENU</div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="active">▦ Dashboard</a>
+            <a href="members.html">♙ Members</a>
+            <a href="trainers.html">♟ Trainers</a>
+            <a href="memberships.html">▣ Memberships</a>
+            <a href="attendance.html">◷ Attendance</a>
+            <a href="payments.html">▤ Payments</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="index.html" class="logout-link">↪ Logout</a>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
+            <div>
+                <p class="dashboard-label">ADMINISTRATION</p>
+                <h2>Dashboard</h2>
+            </div>
+
+            <div class="admin-profile">
+                <div class="admin-avatar">A</div>
+                <div>
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="welcome-banner">
+            <div>
+                <p class="eyebrow">WELCOME BACK 👋</p>
+                <h1>Manage Your Gym<br>With Confidence.</h1>
+                <p>Monitor your gym activities and keep everything organized.</p>
+            </div>
+
+            <div class="welcome-icon">🏋️</div>
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Total Members</span>
+                    <div class="stat-icon">♙</div>
+                </div>
+                <h2 id="totalMembers">0</h2>
+                <p class="stat-growth">Registered members</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Total Memberships</span>
+                    <div class="stat-icon">▣</div>
+                </div>
+                <h2 id="totalMemberships">0</h2>
+                <p class="stat-growth">Recorded memberships</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Total Trainers</span>
+                    <div class="stat-icon">♟</div>
+                </div>
+                <h2 id="totalTrainers">0</h2>
+                <p class="stat-growth">Registered trainers</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Total Payments</span>
+                    <div class="stat-icon">₹</div>
+                </div>
+                <h2 id="totalPayments">₹0</h2>
+                <p class="stat-growth">Total paid amount</p>
+            </div>
+
+        </section>
+
+        <section class="dashboard-columns">
+
+            <div class="dashboard-panel">
+                <div class="panel-header">
+                    <h3>Today's Attendance</h3>
+                    <a href="attendance.html">View All →</a>
+                </div>
+
+                <div class="attendance-summary">
+                    <div class="attendance-circle">82%</div>
+                    <div>
+                        <h3>204 Members</h3>
+                        <p>Attendance recorded today</p>
+                    </div>
+                </div>
+
+                <div class="attendance-bar">
+                    <div></div>
+                </div>
+
+                <div class="attendance-legend">
+                    <span>● Present: 204</span>
+                    <span>● Absent: 44</span>
+                </div>
+            </div>
+
+            <div class="dashboard-panel">
+                <div class="panel-header">
+                    <h3>Recent Activities</h3>
+                    <a href="#">View All →</a>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon">♙</div>
+                    <div>
+                        <strong>New member registered</strong>
+                        <p>Rahul Sharma joined the gym</p>
+                        <small>10 minutes ago</small>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon">₹</div>
+                    <div>
+                        <strong>Payment received</strong>
+                        <p>₹1,499 membership payment</p>
+                        <small>25 minutes ago</small>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon">▣</div>
+                    <div>
+                        <strong>Membership renewed</strong>
+                        <p>Premium plan renewed</p>
+                        <small>1 hour ago</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="dashboard-panel quick-actions">
+            <div class="panel-header">
+                <h3>Quick Actions</h3>
+            </div>
+
+            <div class="quick-action-grid">
+                <a href="members.html">＋ Add Member</a>
+                <a href="trainers.html">＋ Add Trainer</a>
+                <a href="attendance.html">✓ Mark Attendance</a>
+                <a href="payments.html">₹ Record Payment</a>
+            </div>
+        </section>
+
+        <footer class="dashboard-footer">
+            © 2026 FitCore Gym Management System
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/dashboard.js"></script>
+
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("open");
+    }
+</script>
+
+</body>
+</html>

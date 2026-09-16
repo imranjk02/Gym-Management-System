@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance | FitCore</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo">FIT<span>CORE</span></div>
+
+        <div class="sidebar-label">MAIN MENU</div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">▦ Dashboard</a>
+            <a href="members.html">♙ Members</a>
+            <a href="trainers.html">♟ Trainers</a>
+            <a href="memberships.html">▣ Memberships</a>
+            <a href="attendance.html" class="active">◷ Attendance</a>
+            <a href="payments.html">▤ Payments</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="index.html" class="logout-link">↪ Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-header">
+            <div>
+                <p class="eyebrow">GYM MANAGEMENT</p>
+                <h1>Attendance</h1>
+                <p>Manage member check-in and check-out records.</p>
+            </div>
+            <a href="dashboard.html" class="back-btn">← Dashboard</a>
+        </div>
+
+        <section class="member-card">
+            <h2>Mark Attendance</h2>
+
+            <form id="attendanceForm" class="member-form">
+                <input type="number" id="memberId" placeholder="Member ID" required>
+                <input type="date" id="attendanceDate" required>
+                <input type="time" id="checkIn" required>
+                <input type="time" id="checkOut">
+
+                <button type="submit" class="add-btn">
+                    + Mark Attendance
+                </button>
+            </form>
+
+            <p id="attendanceMessage"></p>
+        </section>
+
+        <section class="member-card">
+            <div class="section-heading">
+                <div>
+                    <h2>Attendance Records</h2>
+                    <p>View gym member attendance.</p>
+                </div>
+                <span class="record-label">ATTENDANCE RECORDS</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Member ID</th>
+                            <th>Date</th>
+                            <th>Check In</th>
+                            <th>Check Out</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendanceTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/attendance.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | FitCore</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-container">
+    <div class="auth-brand">
+        <a href="index.html" class="logo">FIT<span>CORE</span></a>
+        <p>GYM MANAGEMENT SYSTEM</p>
+    </div>
+
+    <div class="auth-card">
+        <p class="eyebrow">WELCOME BACK</p>
+        <h1>Admin Login</h1>
+        <p class="auth-subtitle">Access your gym management dashboard.</p>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="email" placeholder="admin@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-options">
+                <label class="remember">
+                    <input type="checkbox"> Remember me
+                </label>
+                <a href="forgot-password.html">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn login-btn">Login to Dashboard</button>
+        </form>
+
+        <p id="loginMessage" class="login-message"></p>
+
+        <div class="auth-footer">
+            <a href="index.html">← Back to Home</a>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

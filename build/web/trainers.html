@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainers | FitCore</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">FIT<span>CORE</span></div>
+
+    <div class="sidebar-label">MAIN MENU</div>
+
+    <nav class="sidebar-nav">
+        <a href="dashboard.html">▦ Dashboard</a>
+        <a href="members.html">♙ Members</a>
+        <a href="trainers.html" class="active">♟ Trainers</a>
+        <a href="memberships.html">▣ Memberships</a>
+        <a href="attendance.html">◷ Attendance</a>
+        <a href="payments.html">▤ Payments</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <a href="index.html" class="logout-link">↪ Logout</a>
+    </div>
+</aside>
+
+<main class="main-content">
+
+    <div class="page-header">
+        <div>
+            <p class="eyebrow">GYM MANAGEMENT</p>
+            <h1>Trainers</h1>
+            <p>Manage your gym trainers and their details.</p>
+        </div>
+        <a href="dashboard.html" class="back-btn">← Dashboard</a>
+    </div>
+
+    <section class="member-card">
+        <h2>Add New Trainer</h2>
+
+        <form id="trainerForm" class="member-form">
+            <input type="text" id="name" placeholder="Trainer Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="text" id="specialization" placeholder="Specialization" required>
+            <button type="submit" class="add-btn">+ Add Trainer</button>
+        </form>
+
+        <p id="trainerMessage"></p>
+    </section>
+
+    <section class="member-card">
+        <div class="section-heading">
+            <div>
+                <h2>All Trainers</h2>
+                <p>View registered gym trainers.</p>
+            </div>
+            <span class="record-label">TRAINER RECORDS</span>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Specialization</th>
+                    </tr>
+                </thead>
+                <tbody id="trainersTable"></tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<script src="js/trainers.js"></script>
+</body>
+</html>
