@@ -3,7 +3,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-
     public static Connection getConnection() throws SQLException {
         String host = System.getenv("DB_HOST");
         String port = System.getenv("DB_PORT");
@@ -13,6 +12,11 @@ public class DatabaseConnection {
 
         String url = "jdbc:mysql://" + host + ":" + port + "/" + database + "?sslMode=REQUIRED";
 
-        return DriverManager.getConnection(url, user, password);
+        try {
+            return DriverManager.getConnection(url, user, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e;
+        }
     }
 }
