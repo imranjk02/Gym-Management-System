@@ -28,7 +28,7 @@ public class Main {
         server.setExecutor(null);
         server.start();
 
-        System.out.println("Server started: http://localhost:8082");
+        System.out.println("Server started on port: " + port);
     }
 
     private static void login(HttpExchange exchange) throws IOException {
