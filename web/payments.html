@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments | FitCore</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">FIT<span>CORE</span></div>
+
+    <div class="sidebar-label">MAIN MENU</div>
+
+    <nav class="sidebar-nav">
+        <a href="dashboard.html">▦ Dashboard</a>
+        <a href="members.html">♙ Members</a>
+        <a href="trainers.html">♟ Trainers</a>
+        <a href="memberships.html">▣ Memberships</a>
+        <a href="attendance.html">◷ Attendance</a>
+        <a href="payments.html" class="active">▤ Payments</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <a href="index.html" class="logout-link">↪ Logout</a>
+    </div>
+</aside>
+
+<main class="main-content">
+    <div class="page-header">
+        <div>
+            <p class="eyebrow">GYM MANAGEMENT</p>
+            <h1>Payments</h1>
+            <p>Manage member payment records.</p>
+        </div>
+
+        <a href="dashboard.html" class="back-btn">← Dashboard</a>
+    </div>
+
+    <section class="member-card">
+        <h2>Record Payment</h2>
+
+        <form id="paymentForm" class="member-form">
+            <input type="number" id="memberId" placeholder="Member ID" required>
+            <input type="number" id="amount" placeholder="Amount" step="0.01" required>
+            <input type="date" id="paymentDate" required>
+
+            <select id="paymentMethod" required>
+                <option value="">Payment Method</option>
+                <option value="Cash">Cash</option>
+                <option value="UPI">UPI</option>
+                <option value="Card">Card</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+            </select>
+
+            <select id="status" required>
+                <option value="Paid">Paid</option>
+                <option value="Pending">Pending</option>
+                <option value="Failed">Failed</option>
+            </select>
+
+            <button type="submit" class="add-btn">+ Record Payment</button>
+        </form>
+
+        <p id="paymentMessage"></p>
+    </section>
+
+    <section class="member-card">
+        <div class="section-heading">
+            <div>
+                <h2>Payment Records</h2>
+                <p>View all member payments.</p>
+            </div>
+
+            <span class="record-label">PAYMENTS</span>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Member ID</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Method</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="paymentTable"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script src="js/payments.js"></script>
+</body>
+</html>

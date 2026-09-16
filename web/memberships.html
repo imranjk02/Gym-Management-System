@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memberships | FitCore</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">FIT<span>CORE</span></div>
+
+    <div class="sidebar-label">MAIN MENU</div>
+
+    <nav class="sidebar-nav">
+        <a href="dashboard.html">▦ Dashboard</a>
+        <a href="members.html">♙ Members</a>
+        <a href="trainers.html">♟ Trainers</a>
+        <a href="memberships.html" class="active">▣ Memberships</a>
+        <a href="attendance.html">◷ Attendance</a>
+        <a href="payments.html">▤ Payments</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <a href="index.html" class="logout-link">↪ Logout</a>
+    </div>
+</aside>
+
+<main class="main-content">
+
+    <div class="page-header">
+        <div>
+            <p class="eyebrow">GYM MANAGEMENT</p>
+            <h1>Memberships</h1>
+            <p>Manage member subscriptions and plans.</p>
+        </div>
+        <a href="dashboard.html" class="back-btn">← Dashboard</a>
+    </div>
+
+    <section class="member-card">
+        <h2>Add New Membership</h2>
+
+        <form id="membershipForm" class="member-form">
+            <input type="number" id="memberId" placeholder="Member ID" required>
+            <input type="text" id="planName" placeholder="Plan Name" required>
+            <input type="date" id="startDate" required>
+            <input type="date" id="endDate" required>
+            <input type="number" id="amount" placeholder="Amount" step="0.01" required>
+            <button type="submit" class="add-btn">+ Add Membership</button>
+        </form>
+
+        <p id="membershipMessage"></p>
+    </section>
+
+    <section class="member-card">
+        <div class="section-heading">
+            <div>
+                <h2>All Memberships</h2>
+                <p>View registered membership plans.</p>
+            </div>
+            <span class="record-label">MEMBERSHIP RECORDS</span>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Member ID</th>
+                        <th>Plan</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="membershipsTable"></tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<script src="js/memberships.js"></script>
+</body>
+</html>
